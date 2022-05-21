@@ -1,7 +1,6 @@
 const express = require("express");
 const rout = require("./router");
 const body_Parser = require("body-parser");
-const Credentials = require("./credential");
 const app = express();
 app.use(body_Parser.json({ limit: "50mb" }));
 app.use(body_Parser.urlencoded({ limit: "50mb", extended: true }));
