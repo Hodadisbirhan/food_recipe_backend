@@ -1,11 +1,8 @@
-
-
 const header = {
-
-    "content-type":"application/json",
-    "x-hasura-admin-secret":"Hodadis1102319."
-}
-const endPont = "https://hodyfood.herokuapp.com/v1/graphql";
+  "content-type": "application/json",
+  "x-hasura-admin-secret": "Hodadis1102319.",
+};
+const endPont = "https://foodrecipeapp.hasura.app/v1/graphql";
 
 const CREATE_USER_QL = `
 mutation($name:String!, $email:String!, $password:String!, $refreshtoken:String!){
@@ -29,9 +26,9 @@ query($email:String!){
       password
       refreshtoken
     }
-  }`
+  }`;
 
-  const fetchByRefresh = `
+const fetchByRefresh = `
 query($refreshtoken:String!){
     users(where:{refreshtoken:{_eq:$refreshtoken}}){
       name
@@ -41,6 +38,6 @@ query($refreshtoken:String!){
       refreshtoken
     }
   }
-`
+`;
 
-module.exports={header,endPont,CREATE_USER_QL,fetchUser,fetchByRefresh};
+module.exports = { header, endPont, CREATE_USER_QL, fetchUser, fetchByRefresh };
