@@ -1,6 +1,5 @@
 const {express} = require("express");
 
-
 const excute = require("./connecttoHasura");
 const { fetchUser }= require("./qraohQl");
 
